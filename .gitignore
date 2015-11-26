@@ -1,32 +1,24 @@
-# Object files
-*.o
-*.ko
-*.obj
-*.elf
-
-# Precompiled Headers
-*.gch
-*.pch
-
-# Libraries
-*.lib
-*.a
-*.la
-*.lo
-
-# Shared objects (inc. Windows DLLs)
-*.dll
-*.so
-*.so.*
-*.dylib
-
-# Executables
-*.exe
-*.out
-*.app
-*.i*86
-*.x86_64
-*.hex
-
-# Debug files
-*.dSYM/
+#include <stdio.h>
+int main() {
+   
+int N, M, Sum = 0, L, A;
+//Armazenando os dados no programa.
+ while (scanf("%d %d", &M, &N), (M > 0) && (N > 0)) {
+       Sum = 0;
+     //Nenhum dos dois valores digitados podem ser menor que zero.
+ if (M > N){
+L = M;
+M = N;
+N = L;
+  
+//Se um dos dois valores for zero será cancelada o calculo.
+ }
+ for(A = M; A <= N; A++){
+     printf("%d ",A);
+     Sum += A;
+}
+//Exibindo mensagem.
+printf("Sum=%d\n", Sum);
+ } 
+    return 0;
+}
